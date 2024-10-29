@@ -4,7 +4,7 @@ import java.net.*;
 import java.io.*;
 
 public class EchoServer {
-    public static final int portNumber = 12345;  // Port number to listen on
+    public static final int portNumber = 6013;  // Port number to listen on
 
     public static void main(String[] args) {
         try {
