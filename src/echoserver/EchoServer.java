@@ -4,11 +4,11 @@ import java.net.*;
 import java.io.*;
 
 public class EchoServer {
-    public static final int portNumber = 6013;  // Port number to listen on
+    public static final int portNumber = 6013;  
 
     public static void main(String[] args) {
         try {
-            //using the Git link from the lab to help
+            //using the NicMcPhee git link from the lab to help
             // start lisstening on the specified prot
             ServerSocket serverSocket = new ServerSocket(portNumber);
 
@@ -31,8 +31,9 @@ public class EchoServer {
                 clientSocket.close();
                 System.out.println("Client disconnected.");
             }
-        } catch (IOException ioe) {
-            System.out.println("caught unexpected ioexception");
-        }
+        }  catch (IOException ioe) {
+            System.out.println("We caught an unexpected exception");
+            System.err.println(ioe);
+    }
     }
 }

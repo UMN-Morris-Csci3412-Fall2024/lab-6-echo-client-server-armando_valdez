@@ -4,8 +4,7 @@ import java.net.*;
 import java.io.*;
 
 public class EchoClient {
-    //used link from lab to help
-    //match the server
+    //used NicMcPhee link from lab to help 
     public static final int portNumber = 6013; 
     public static void main(String[] args) {
         String server;
@@ -28,9 +27,9 @@ public class EchoClient {
 
             // it will read from System.in and tell the server
             // it will send each byte to the server
-            int byteRead;
-            while ((byteRead = System.in.read()) != -1) {
-                output.write(byteRead);  
+            int bytes;
+            while ((bytes = System.in.read()) != -1) {
+                output.write(bytes);  
                 output.flush();
             }
 
@@ -38,8 +37,8 @@ public class EchoClient {
             socket.shutdownOutput();
 
             // it will read the echoed data from the server
-            while ((byteRead = input.read()) != -1) {
-                System.out.write(byteRead);  
+            while ((bytes = input.read()) != -1) {
+                System.out.write(bytes);  
                 System.out.flush();
             }
 
