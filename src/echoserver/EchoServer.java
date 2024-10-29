@@ -32,7 +32,7 @@ public class EchoServer {
                 System.out.println("Client disconnected.");
             }
         } catch (IOException ioe) {
-            System.err.println("caught unexpected ioexception");
+            System.out.println("caught unexpected ioexception");
         }
     }
 }
